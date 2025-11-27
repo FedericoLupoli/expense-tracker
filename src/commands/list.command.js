@@ -1,10 +1,4 @@
-import fs from "fs";
-import path from "path";
-import chalk from "chalk";
-
-import messages from "../utils/messages.json" with { type: "json" };
-
-import * as storage from "../utils/storage.util.js";
+import { chalk, storage, messages } from "../utils/imports.js";
 
 export const listEspenses = () => {
   const expenses = storage.readStorage();

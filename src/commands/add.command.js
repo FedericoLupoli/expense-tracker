@@ -6,15 +6,7 @@
  * @property {string} date - Data della spesa (formato DD-MM-YYYY)
  */
 
-import fs from "fs";
-import path from "path";
-import chalk from "chalk";
-
-import messages from "../utils/messages.json" with { type: "json" };
-
-import * as storage from "../utils/storage.util.js";
-
-import { getCurrentDate } from "../utils/misc.util.js";
+import { chalk, storage, messages, getCurrentDate } from "../utils/imports.js";
 
 export const addExpense = (description, amount) => {
   if (!description || description.trim() === "") {
@@ -44,6 +36,8 @@ export const addExpense = (description, amount) => {
   console.log(
     `${messages.Info.ID}: ${newExpense.id}, ${messages.Info.Description}: ${
       newExpense.description
-    }, ${messages.Info.Amount}: €${newExpense.amount.toFixed(2)}, ${messages.Info.Date}: ${newExpense.date}`,
+    }, ${messages.Info.Amount}: €${newExpense.amount.toFixed(2)}, ${
+      messages.Info.Date
+    }: ${newExpense.date}`,
   );
 };

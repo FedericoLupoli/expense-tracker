@@ -1,10 +1,4 @@
-import fs from "fs";
-import path from "path";
-import chalk from "chalk";
-
-import messages from "../utils/messages.json" with { type: "json" };
-
-import * as storage from "../utils/storage.util.js";
+import { chalk, storage, messages } from "../utils/imports.js";
 
 export const deleteCommand = (id) => {
   const storageData = storage.readStorage();
@@ -17,5 +11,9 @@ export const deleteCommand = (id) => {
 
   storageData.splice(index, 1);
   storage.writeStorage(storageData);
-  console.log(chalk.green(`${messages.Success.ExpenseDeleted} ${messages.Info.ID}: ${id}.`));
+  console.log(
+    chalk.green(
+      `${messages.Success.ExpenseDeleted} ${messages.Info.ID}: ${id}.`,
+    ),
+  );
 };
