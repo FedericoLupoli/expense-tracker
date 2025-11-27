@@ -21,11 +21,11 @@
 
 ### 3. Comando: List Expenses
 
-- [ ] Implementare `src/commands/list.command.js`
-  - [ ] Leggere tutte le spese dal file
-  - [ ] Formattare l'output in formato tabella
-  - [ ] Colonne: ID, Date, Description, Amount
-  - [ ] Gestire il caso di lista vuota
+- [x] Implementare `src/commands/list.command.js`
+  - [x] Leggere tutte le spese dal file
+  - [x] Formattare l'output in formato tabella
+  - [x] Colonne: ID, Date, Description, Amount
+  - [x] Gestire il caso di lista vuota
 
 ### 4. Comando: Delete Expense
 
