@@ -10,19 +10,19 @@ import fs from "fs";
 import path from "path";
 import chalk from "chalk";
 
+import messages from "../utils/messages.json" with { type: "json" };
+
 import * as storage from "../utils/storage.util.js";
 
 import { getCurrentDate } from "../utils/misc.util.js";
 
 export const addExpense = (description, amount) => {
   if (!description || description.trim() === "") {
-    console.error(chalk.red("Errore: La descrizione non può essere vuota."));
+    console.error(chalk.red(`${messages.Error.InvalidDescription}`));
     process.exit(1);
   }
   if (isNaN(amount) || amount <= 0) {
-    console.error(
-      chalk.red("Errore: L'importo deve essere un numero positivo."),
-    );
+    console.error(chalk.red(`${messages.Error.InvalidAmount}`));
     process.exit(1);
   }
 
@@ -40,10 +40,10 @@ export const addExpense = (description, amount) => {
   // salvare le spese aggiornate
   storage.writeStorage(expenses);
 
-  console.log(chalk.green("Spesa aggiunta con successo:"));
+  console.log(chalk.green(`${messages.Success.ExpenseAdded}`));
   console.log(
-    `ID: ${newExpense.id}, Descrizione: ${
+    `${messages.Info.ID}: ${newExpense.id}, ${messages.Info.Description}: ${
       newExpense.description
-    }, Importo: €${newExpense.amount.toFixed(2)}, Data: ${newExpense.date}`,
+    }, ${messages.Info.Amount}: €${newExpense.amount.toFixed(2)}, ${messages.Info.Date}: ${newExpense.date}`,
   );
 };

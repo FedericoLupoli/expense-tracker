@@ -1,0 +1,19 @@
+{
+  "Error": {
+    "InvalidAmount": "Errore: L'importo deve essere un numero positivo.",
+    "InvalidDescription": "Errore: La descrizione non può essere vuota.",
+    "ExpenseNotFound": "Errore: Spesa non trovata con ID",
+    "NoExpenses": "Nessuna spesa trovata."
+  },
+  "Success": {
+    "ExpenseAdded": "Spesa aggiunta con successo:",
+    "ExpenseDeleted": "Spesa eliminata con successo:"
+  },
+  "Info": {
+    "ExpensesList": "Elenco delle spese:",
+    "ID": "ID",
+    "Description": "Descrizione",
+    "Amount": "Importo",
+    "Date": "Data"
+  }
+}
