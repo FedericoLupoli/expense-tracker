@@ -29,12 +29,12 @@
 
 ### 4. Comando: Delete Expense
 
-- [ ] Implementare `src/commands/delete.command.js`
-  - [ ] Validare parametro `--id`
-  - [ ] Verificare che l'ID esista
-  - [ ] Rimuovere la spesa dal file
-  - [ ] Output: "Expense deleted successfully"
-  - [ ] Error handling per ID non esistente
+- [x] Implementare `src/commands/delete.command.js`
+  - [x] Validare parametro `--id`
+  - [x] Verificare che l'ID esista
+  - [x] Rimuovere la spesa dal file
+  - [x] Output: "Expense deleted successfully"
+  - [x] Error handling per ID non esistente
 
 ### 5. Comando: Update Expense
 

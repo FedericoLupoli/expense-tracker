@@ -4,6 +4,7 @@ import { program } from "commander";
 
 import { addExpense } from "../src/commands/add.command.js";
 import { listEspenses } from "../src/commands/list.command.js";
+import { deleteCommand } from "../src/commands/delete.command.js";
 
 program
   .name("expense-tracker")
@@ -28,6 +29,15 @@ program
   .description("List all expenses")
   .action(() => {
     listEspenses();
+  });
+
+program
+  .command("delete")
+  .description("Delete an expense by ID")
+  .requiredOption("-i, --id <id>", "ID of the expense to delete")
+  .action((options) => {
+    const { id } = options;
+    deleteCommand(parseInt(id, 10));
   });
 
 program.parse(program.argv);
