@@ -12,7 +12,7 @@ import chalk from "chalk";
 
 import * as storage from "../utils/storage.util.js";
 
-imoport { getCurrentDate } from "../utils/misc.util.js";
+import { getCurrentDate } from "../utils/misc.util.js";
 
 export const addExpense = (description, amount) => {
   if (!description || description.trim() === "") {
