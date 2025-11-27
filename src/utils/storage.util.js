@@ -13,7 +13,7 @@ export const ensureDataDirExists = () => {
 export const ensureStorageFileExists = () => {
   ensureDataDirExists();
   if (!fs.existsSync(storageFilePath)) {
-    fs.writeFileSync(storageFilePath, JSON.stringify({}));
+    fs.writeFileSync(storageFilePath, JSON.stringify([]));
   }
 };
 
@@ -31,4 +31,5 @@ export const writeStorage = (data) => {
 export const getNextID = () => {
   const storage = readStorage();
   const newId = storage.length > 0 ? storage[storage.length - 1].id + 1 : 1;
+  return newId;
 };

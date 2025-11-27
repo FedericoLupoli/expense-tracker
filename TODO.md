@@ -12,12 +12,12 @@
 
 ### 2. Comando: Add Expense
 
-- [ ] Implementare `src/commands/add.command.js`
-  - [ ] Validare parametri `--description` e `--amount`
-  - [ ] Validare che l'amount sia un numero positivo
-  - [ ] Aggiungere la data corrente automaticamente
-  - [ ] Salvare la spesa nel file JSON
-  - [ ] Output: "Expense added successfully (ID: X)"
+- [x] Implementare `src/commands/add.command.js`
+  - [x] Validare parametri `--description` e `--amount`
+  - [x] Validare che l'amount sia un numero positivo
+  - [x] Aggiungere la data corrente automaticamente
+  - [x] Salvare la spesa nel file JSON
+  - [x] Output: "Expense added successfully (ID: X)"
 
 ### 3. Comando: List Expenses
 
