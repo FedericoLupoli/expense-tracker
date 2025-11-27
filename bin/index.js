@@ -6,6 +6,7 @@ import { addExpense } from "../src/commands/add.command.js";
 import { listEspenses } from "../src/commands/list.command.js";
 import { deleteCommand } from "../src/commands/delete.command.js";
 import { updateExpense } from "../src/commands/update.command.js";
+import { summaryCommand } from "../src/commands/summary.command.js";
 
 program
   .name("expense-tracker")
@@ -54,6 +55,15 @@ program
       description,
       amount !== undefined ? parseFloat(amount) : undefined,
     );
+  });
+
+program
+  .command("summary")
+  .description("Show a summary of expenses")
+  .option("-m, --month <month>", "Month for the summary (1-12)")
+  .action((options) => {
+    const { month } = options;
+    summaryCommand(month !== undefined ? month : null);
   });
 
 program.parse(program.argv);

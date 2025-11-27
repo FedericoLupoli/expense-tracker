@@ -3,7 +3,8 @@
     "InvalidAmount": "Errore: L'importo deve essere un numero positivo.",
     "InvalidDescription": "Errore: La descrizione non può essere vuota.",
     "ExpenseNotFound": "Errore: Spesa non trovata con ID ",
-    "NoExpenses": "Nessuna spesa trovata."
+    "NoExpenses": "Nessuna spesa trovata.",
+    "InvalidMonth": "Errore: Il mese deve essere un numero tra 1 e 12."
   },
   "Success": {
     "ExpenseAdded": "Spesa aggiunta con successo:",
@@ -15,6 +16,8 @@
     "ID": "ID",
     "Description": "Descrizione",
     "Amount": "Importo",
-    "Date": "Data"
+    "Date": "Data",
+    "TotalExpenses": "Totale spese",
+    "Month": "Mese"
   }
 }
