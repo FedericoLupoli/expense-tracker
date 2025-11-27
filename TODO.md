@@ -4,11 +4,11 @@
 
 ### 1. Data Storage & Management
 
-- [ ] Creare il modulo per la gestione del file JSON (`src/utils/storage.util.js`)
-  - [ ] Funzione per leggere le spese dal file
-  - [ ] Funzione per scrivere le spese nel file
-  - [ ] Generazione automatica degli ID progressivi
-  - [ ] Gestione della creazione del file se non esiste
+- [x] Creare il modulo per la gestione del file JSON (`src/utils/storage.util.js`)
+  - [x] Funzione per leggere le spese dal file
+  - [x] Funzione per scrivere le spese nel file
+  - [x] Generazione automatica degli ID progressivi
+  - [x] Gestione della creazione del file se non esiste
 
 ### 2. Comando: Add Expense
 
