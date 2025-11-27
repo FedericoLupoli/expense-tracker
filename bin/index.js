@@ -3,6 +3,7 @@
 import { program } from "commander";
 
 import { addExpense } from "../src/commands/add.command.js";
+import { listEspenses } from "../src/commands/list.command.js";
 
 program
   .name("expense-tracker")
@@ -20,6 +21,13 @@ program
   .action((options) => {
     const { description, amount } = options;
     addExpense(description, amount);
+  });
+
+program
+  .command("list")
+  .description("List all expenses")
+  .action(() => {
+    listEspenses();
   });
 
 program.parse(program.argv);
